@@ -1,4 +1,4 @@
-﻿// 02_Collections, Bruce Johnson, 10/3/24 v0.1d
+﻿// 02_Collections, Bruce Johnson, 10/3/24 v0.2a
 using System;
 
 namespace _02_Colletions
@@ -43,12 +43,22 @@ namespace _02_Colletions
             */
 
             // Determining Array Length
-            Console.WriteLine("The length of each array is:/n");
+            Console.WriteLine("The length of each array is:\n");
             Console.WriteLine("breakfastFoods: " + breakfastFoods.Length);
             Console.WriteLine("testScores: " + testScores.Length);
             Console.WriteLine("GPA: " + GPA.Length);
 
+            // Acessing Array Elements -- using the index!
+            Console.WriteLine("The first element in each array is:\n");
+            Console.WriteLine("breakfastFoods: " + breakfastFoods[0]);
+            Console.WriteLine("testScores: " + testScores[0]);
+            Console.WriteLine("GPA: " + GPA[0]);
 
+            // Access Last Element
+            Console.WriteLine("The last element in each array is:/n");
+            Console.WriteLine("breakfastFoods: " + breakfastFoods[breakfastFoods.Length - 1]);
+            Console.WriteLine("testScores: " + testScores[testScores.Length - 1]);
+            Console.WriteLine("GPA: " + GPA[GPA.Length - 1]);
 
  
         }
