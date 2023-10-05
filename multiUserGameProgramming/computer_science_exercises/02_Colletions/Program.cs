@@ -1,4 +1,4 @@
-﻿// 02_Collections, Bruce Johnson, 10/3/24 v0.1c
+﻿// 02_Collections, Bruce Johnson, 10/3/24 v0.1d
 using System;
 
 namespace _02_Colletions
@@ -42,7 +42,15 @@ namespace _02_Colletions
             Console.WriteLine();
             */
 
+            // Determining Array Length
+            Console.WriteLine("The length of each array is:/n");
+            Console.WriteLine("breakfastFoods: " + breakfastFoods.Length);
+            Console.WriteLine("testScores: " + testScores.Length);
+            Console.WriteLine("GPA: " + GPA.Length);
 
+
+
+ 
         }
     }
 }
