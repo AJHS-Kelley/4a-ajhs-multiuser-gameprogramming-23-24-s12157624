@@ -1,4 +1,4 @@
-// Bruce Johnson, Program Template, v0.1
+// Bruce Johnson, Program Template, v0.2
 using System;
 
 namespace MethosdsParameters
@@ -35,11 +35,18 @@ namespace MethosdsParameters
             }
         }
 
+        static void MakeEggs(int num, string style)
+        {
+            Consolle.WriteLine("You have ordered " + num + "eggs cooked " + style + ".\n");
+        }
+
+
         static void Main(string[] args)
         {
             //MyMethod();
             //DoubleUp();
-            MakePancakes();
+            //MakePancakes();
+            MakeEggs(10, "sunny side up");
         }
     }
 }
