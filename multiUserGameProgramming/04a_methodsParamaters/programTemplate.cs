@@ -1,4 +1,4 @@
-// Bruce Johnson, Program Template, v0.2
+// Bruce Johnson, Program Template, v0.3
 using System;
 
 namespace MethosdsParameters
@@ -40,13 +40,22 @@ namespace MethosdsParameters
             Consolle.WriteLine("You have ordered " + num + "eggs cooked " + style + ".\n");
         }
 
+        // Using Defaults for Parameters
+        static void MakeBurger(int num = 1)
+        {
+            Console.WriteLine("I am going to cook " + num + "hamburger")
+        }
+
 
         static void Main(string[] args)
         {
             //MyMethod();
             //DoubleUp();
             //MakePancakes();
-            MakeEggs(10, "sunny side up");
+            //MakeEggs(10, "sunny side up");
+            //MakeBurger();
+            //MakeBurger(10);
+            //AllMyChildren(child3: "Steve")
         }
     }
 }
