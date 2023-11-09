@@ -1,4 +1,4 @@
-// Bruce Johnson, Program Template, v0.4
+// Bruce Johnson, Program Template, v0.5
 using System;
 
 namespace MethosdsParameters
@@ -66,18 +66,23 @@ namespace MethosdsParameters
             double sum = x + y;
             Console.WriteLine("Sum: "+ sum);
             return sum;
-        }
+         }
 
-
+       
         static void Main(string[] args)
         {
-            //MyMethod();
+            //myMethod();
             //DoubleUp();
             //MakePancakes();
-            //MakeEggs(10, "sunny side up");
+            //MakeEgges(10."sunny side up");
             //MakeBurger();
             //MakeBurger(10);
-            //AllMyChildren(child3: "Steve")
+            //AllMyChildren(child3: "Kurt", child2: "Chino", child1: "Jake the dog");
+            FindSum(1,5);
+            FindSum(9.5,2.4);
+            FindSum(5,2.5);
+
+           
         }
     }
 }
