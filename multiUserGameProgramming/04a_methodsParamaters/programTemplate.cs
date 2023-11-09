@@ -29,21 +29,26 @@ namespace MethosdsParameters
         // Methods with Parameters
         static void MakePancakes(int num)
         {
-            for (int i = o; i , num; i++)
+            for (int i = 0; i < num; i++)
             {
-                Console.WriteLine("One golden, fluffy pancake coming up!\n");
+                Console.WriteLine("one golden, Fluffy pancake coming up!\n");
             }
-        }
 
+        }
+       
         static void MakeEggs(int num, string style)
-        {
-            Consolle.WriteLine("You have ordered " + num + "eggs cooked " + style + ".\n");
+        {  
+            Console.WriteLine("you have orrdered" + num + "eggs cooked" + style + ".\n");
         }
-
-        // Using Defaults for Parameters
+       
         static void MakeBurger(int num = 1)
         {
-            Console.WriteLine("I am going to cook " + num + "hamburger")
+            Console.WriteLine("i am going to cook " + num + "hamburgers.\n");
+        }
+       
+        static void AllMyChildren(string child1, string child2, string child3)
+        {
+             Console.WriteLine("my favorite child is " + child3);
         }
 
 
