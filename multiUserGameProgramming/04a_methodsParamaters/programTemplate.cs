@@ -1,4 +1,4 @@
-// Bruce Johnson, Program Template, v0.3
+// Bruce Johnson, Program Template, v0.4
 using System;
 
 namespace MethosdsParameters
@@ -49,6 +49,23 @@ namespace MethosdsParameters
         static void AllMyChildren(string child1, string child2, string child3)
         {
              Console.WriteLine("my favorite child is " + child3);
+        }
+       
+       
+       
+        static int FindSum(int x, int y)
+        {
+            int sum = x + y;
+            Console.WriteLine("Sum: "+ sum);
+            return sum;
+        }
+
+
+        static double FindSum(double x, double y)
+        {
+            double sum = x + y;
+            Console.WriteLine("Sum: "+ sum);
+            return sum;
         }
 
 
