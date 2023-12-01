@@ -1,4 +1,4 @@
-// Bruce Johnson, Example Game Methods, v0.0
+// Bruce Johnson, Example Game Methods, v0.1
 using System;
 
 namespace UPDATEFOREACHPROGRAM
@@ -6,25 +6,25 @@ namespace UPDATEFOREACHPROGRAM
     class UPDATEFOREACHPROGRAM
     
     {
-        static void playerhealth()
+        static float playerhealth()
         // Ammount Of health the that the player has after every move / attack 
+        { 
+            
+        }
+
+        static int shieldPoints()
+        {
+            
+        }
+
+        static string playerAttack()
         {
 
         }
 
-        static void shieldPoints()
+        static string chestLoot()
         {
-
-        }
-
-        static int playerAttack()
-        {
-
-        }
-
-        static int chestLoot()
-        {
-
+            
         }
     }
 }
