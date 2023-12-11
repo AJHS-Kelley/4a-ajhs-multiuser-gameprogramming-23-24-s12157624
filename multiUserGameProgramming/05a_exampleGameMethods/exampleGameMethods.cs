@@ -1,4 +1,4 @@
-// Bruce Johnson, Example Game Methods, v0.4
+// Bruce Johnson, Example Game Methods, v0.5
 using System;
 
 namespace UPDATEFOREACHPROGRAM
@@ -38,10 +38,30 @@ namespace UPDATEFOREACHPROGRAM
         {
             Console.WriteLine("you search vigorously but find nothing of significance")
         }
-        
-        static string chestLoot()
+
+        static bool FindWeapon()
+        // This method simulates the chance of finding a weapon and returns a boolean.
         {
-            
+            Console.WriteLine("While exploring, you come across a mysterious glowig chest.")
+
+            Random random = new Random();
+            return random.Next(2) == 0; // 50% chance of finding treasure
+        }
+
+        static void BattleEnemy(string monster, int playerHealth = 100)
+        // simultates a battle between player and enemy
+
+        {
+            Console.WriteLine($"You encounter a fearsome enemy!");
+
+            int enemyAttackPower = 20;
+            int damageTaken = CalculateDamage(enemyAttackPower);
+
+            Console.writeLine($"You too {damageTaken} damage from the {monster}.")
+
+            playerHealth -= damageTaken;
+
+            Console.WriteLine($"Your health: {playerHealth}");
         }
     }
 }
