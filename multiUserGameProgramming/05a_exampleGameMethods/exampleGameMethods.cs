@@ -1,4 +1,4 @@
-// Bruce Johnson, Example Game Methods, v0.3
+// Bruce Johnson, Example Game Methods, v0.4
 using System;
 
 namespace UPDATEFOREACHPROGRAM
@@ -22,11 +22,23 @@ namespace UPDATEFOREACHPROGRAM
             Console.WriteLine("Congratulations!! You have completed your grand adventure.");
         }
 
-        static string playerAttack()
+        static void ExploreArea()
+        // the player explores the suroundings and finds a cave where you can find magnificent weapon or find nothing.
         {
-
+            Console.WriteLine("While exploring the area you find and enter a Cave.")
         }
 
+        bool foundWeapon = FindWeapon();
+
+        if (foundWeapon)
+        {
+            Console.WriteLine("You found a powerful weapon")
+        }
+        else
+        {
+            Console.WriteLine("you search vigorously but find nothing of significance")
+        }
+        
         static string chestLoot()
         {
             
