@@ -1,4 +1,4 @@
-// Bruce Johnson, Example Game Methods, v0.5
+// Bruce Johnson, Example Game Methods, v0.6
 using System;
 
 namespace UPDATEFOREACHPROGRAM
@@ -62,6 +62,15 @@ namespace UPDATEFOREACHPROGRAM
             playerHealth -= damageTaken;
 
             Console.WriteLine($"Your health: {playerHealth}");
+        }
+
+        static int CalculateDamage(int enemyAttackPower)
+        // Calculates the damage taken during a battle and returns the damage value.
+        {
+            int playerDefense = 10;
+            int damageTaken = enemyAttackPower - playerDefense;
+
+            return Math.Max(0, damageTaken);
         }
     }
 }
