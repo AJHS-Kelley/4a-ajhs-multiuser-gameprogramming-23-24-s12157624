@@ -1,4 +1,4 @@
-// Bruce Johnson, Example Game Methods, v0.7
+// Bruce Johnson, Example Game Methods, v0.8
 using System;
 
 namespace UPDATEFOREACHPROGRAM
@@ -9,6 +9,7 @@ namespace UPDATEFOREACHPROGRAM
         static void Main()
         { 
             StartAdventure();
+
         } 
 
         static void StartAdventure()
@@ -18,9 +19,8 @@ namespace UPDATEFOREACHPROGRAM
             Console.WriteLine("You find yourself in a Mysterious world...");
 
             ExploreArea();
-            bool foundWeapon = findWeapon();
-            BattleEnemy(string monster, int playerHealth = 100);
-            winOrLose();
+            bool foundWeapon = FindWeapon();
+            winOrLose(foundWeapon);
 
             Console.WriteLine("Congratulations!! You have completed your grand adventure.");
         }
@@ -28,7 +28,7 @@ namespace UPDATEFOREACHPROGRAM
         static void ExploreArea()
         // the player explores the suroundings and finds a cave where you can find magnificent weapon or find nothing.
         {
-            Console.WriteLine("While exploring the area you find and enter a Cave.")
+            Console.WriteLine("While exploring the area you find and enter a Cave.");
         }
 
         static bool FindWeapon()
@@ -36,7 +36,7 @@ namespace UPDATEFOREACHPROGRAM
         {
             bool foundWeapon = FindWeapon();
             Random random = new Random();
-            int randNumber = Random.Next(1,3); // 50% chance of finding treasure
+            int randNumber = random.Next(1,3); // 50% chance of finding treasure
 
             if (randNumber == 2)
             {
@@ -46,6 +46,8 @@ namespace UPDATEFOREACHPROGRAM
             {
                 foundWeapon = false;
             }
+
+            Console.WriteLine("While exploring, you come across a mysterious glowig chest.");
             if (foundWeapon)
             {
                 Console.WriteLine("You found a powerful weapon");
@@ -54,34 +56,17 @@ namespace UPDATEFOREACHPROGRAM
             {
                 Console.WriteLine("you search vigorously but find nothing of significance");
             }
-            Console.WriteLine("While exploring, you come across a mysterious glowig chest.");
 
             return foundWeapon;
         }
 
-        static void BattleEnemy(string monster, int playerHealth = 100)
-        // simultates a battle between player and enemy
-
-        {
-            Console.WriteLine($"You encounter a fearsome enemy!");
-
-            int enemyAttackPower = 20;
-            int damageTaken = CalculateDamage(enemyAttackPower);
-
-            Console.writeLine($"You too {damageTaken} damage from the {monster}.")
-
-            playerHealth -= damageTaken;
-
-            Console.WriteLine($"Your health: {playerHealth}");
-        }
-
-        static int winOrLose()
+        static int winOrLose(bool foundWeapon)
         // Win or loose vs the monster
         {
             Random random = new Random();
-            int randNumber = Random.Next(1,11); // 50% chance of finding treasure
+            int randNumber = random.Next(1,11); // 50% chance of finding treasure
 
-            if (randNumber == 2)
+            if (randNumber > 3 )
             {
                 foundWeapon = true;
             }
@@ -89,15 +74,36 @@ namespace UPDATEFOREACHPROGRAM
             {
                 foundWeapon = false;
             }
-            if (foundWeapon)
+
+            Console.WriteLine("A fearsome monster appears and you attack");
+            
+            while apttempts = 5
             {
-                Console.WriteLine("You found a powerful weapon");
+                randNumber = random.Next(1,11);
+            
+                if (foundWeapon && randNumber > 5 )
+                {
+                    Console.WriteLine("The world is saved and you win.")
+                    System.Environment.Exit(0);
+                }
+                else if (foundWeapon && randNumber < 6)
+                {
+                    Console.WriteLine("The world is and you win.")
+                    System.Environment.Exit(0);
+                }
+                else if (foundWeapon && randNumber == 1)
+                {
+                    Console.WriteLine("The world is and you win.")
+                    System.Environment.Exit(0);
+
+                }else if (foundWeapon && randNumber > 1)
+                {
+                    Console.WriteLine("The world is and you win.")
+                    System.Environment.Exit(0);
+                }
+                
             }
-            else
-            {
-                Console.WriteLine("you search vigorously but find nothing of significance");
-            }
-            Console.WriteLine("While exploring, you come across a mysterious glowig chest.");  
+
         }
     }
 }
