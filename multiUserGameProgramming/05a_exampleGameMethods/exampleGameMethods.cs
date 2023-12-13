@@ -1,4 +1,4 @@
-// Bruce Johnson, Example Game Methods, v0.6
+// Bruce Johnson, Example Game Methods, v0.7
 using System;
 
 namespace UPDATEFOREACHPROGRAM
@@ -18,6 +18,9 @@ namespace UPDATEFOREACHPROGRAM
             Console.WriteLine("You find yourself in a Mysterious world...");
 
             ExploreArea();
+            bool foundWeapon = findWeapon();
+            BattleEnemy(string monster, int playerHealth = 100);
+            winOrLose();
 
             Console.WriteLine("Congratulations!! You have completed your grand adventure.");
         }
@@ -28,24 +31,32 @@ namespace UPDATEFOREACHPROGRAM
             Console.WriteLine("While exploring the area you find and enter a Cave.")
         }
 
-        bool foundWeapon = FindWeapon();
-
-        if (foundWeapon)
-        {
-            Console.WriteLine("You found a powerful weapon")
-        }
-        else
-        {
-            Console.WriteLine("you search vigorously but find nothing of significance")
-        }
-
         static bool FindWeapon()
         // This method simulates the chance of finding a weapon and returns a boolean.
         {
-            Console.WriteLine("While exploring, you come across a mysterious glowig chest.")
-
+            bool foundWeapon = FindWeapon();
             Random random = new Random();
-            return random.Next(2) == 0; // 50% chance of finding treasure
+            int randNumber = Random.Next(1,3); // 50% chance of finding treasure
+
+            if (randNumber == 2)
+            {
+                foundWeapon = true;
+            }
+            else
+            {
+                foundWeapon = false;
+            }
+            if (foundWeapon)
+            {
+                Console.WriteLine("You found a powerful weapon");
+            }
+            else
+            {
+                Console.WriteLine("you search vigorously but find nothing of significance");
+            }
+            Console.WriteLine("While exploring, you come across a mysterious glowig chest.");
+
+            return foundWeapon;
         }
 
         static void BattleEnemy(string monster, int playerHealth = 100)
@@ -64,13 +75,29 @@ namespace UPDATEFOREACHPROGRAM
             Console.WriteLine($"Your health: {playerHealth}");
         }
 
-        static int CalculateDamage(int enemyAttackPower)
-        // Calculates the damage taken during a battle and returns the damage value.
+        static int winOrLose()
+        // Win or loose vs the monster
         {
-            int playerDefense = 10;
-            int damageTaken = enemyAttackPower - playerDefense;
+            Random random = new Random();
+            int randNumber = Random.Next(1,11); // 50% chance of finding treasure
 
-            return Math.Max(0, damageTaken);
+            if (randNumber == 2)
+            {
+                foundWeapon = true;
+            }
+            else
+            {
+                foundWeapon = false;
+            }
+            if (foundWeapon)
+            {
+                Console.WriteLine("You found a powerful weapon");
+            }
+            else
+            {
+                Console.WriteLine("you search vigorously but find nothing of significance");
+            }
+            Console.WriteLine("While exploring, you come across a mysterious glowig chest.");  
         }
     }
 }
