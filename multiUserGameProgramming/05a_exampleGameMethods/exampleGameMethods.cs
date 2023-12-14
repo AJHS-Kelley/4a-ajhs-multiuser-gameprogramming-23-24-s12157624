@@ -83,22 +83,22 @@ namespace UPDATEFOREACHPROGRAM
             
                 if (foundWeapon && randNumber > 5 )
                 {
-                    Console.WriteLine("The world is saved and you win.")
+                    Console.WriteLine("You have kill the monster and the world is saved you win.")
                     System.Environment.Exit(0);
                 }
                 else if (foundWeapon && randNumber < 6)
                 {
-                    Console.WriteLine("The world is and you win.")
+                    Console.WriteLine("You have missed, The world is doomed and you lose.")
                     System.Environment.Exit(0);
                 }
                 else if (foundWeapon && randNumber == 1)
                 {
-                    Console.WriteLine("The world is and you win.")
+                    Console.WriteLine("You have kill the monster and the world is saved you win.")
                     System.Environment.Exit(0);
 
                 }else if (foundWeapon && randNumber > 1)
                 {
-                    Console.WriteLine("The world is and you win.")
+                    Console.WriteLine("You have missed, The world is doomed and you lose.")
                     System.Environment.Exit(0);
                 }
                 
