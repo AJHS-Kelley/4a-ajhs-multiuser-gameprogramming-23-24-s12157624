@@ -1,4 +1,4 @@
-// Bruce Johnson, Example Game Methods, v0.8
+// Bruce Johnson, Example Game Methods, v0.9
 using System;
 
 namespace UPDATEFOREACHPROGRAM
